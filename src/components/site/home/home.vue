@@ -88,7 +88,6 @@
         <ul class="consume-details">
           <li>
             <div>
-              
             </div>
           </li>
         </ul>

@@ -1,3 +1,16 @@
 {
-	
+	"homeData": {
+		"banner": [
+			{
+				"id": 1,
+				"imgSrc": "../../../z_simulated_data/images/banner1.png",
+				"url": "/ucenter/uindex"
+			},
+			{
+				"id": 2,
+				"imgSrc": "../../../z_simulated_data/images/banner2.jpg",
+				"url": "/ucenter/uindex"
+			}
+		]
+	}
 }

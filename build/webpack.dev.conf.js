@@ -10,6 +10,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+const express = require('express')
+const app = express()
+var appData = require('../z_simulated_data/data.json')
+var homeData = appData.homeData // 首页数据
+var apiRoutes = express.Router()
+app.use('/api', apiRoutes)
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,6 +49,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before (app) {
+      app.get('/api/getHome', (req, res) => { // 首页数据
+        res.json({
+          code: 1,
+          msg: 'success',
+          data: homeData
+        })
+      })
     }
   },
   plugins: [
