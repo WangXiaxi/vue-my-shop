@@ -25,6 +25,7 @@ export default {
     display: flex
     flex-direction: column
     .router-box
+      position: relative
       flex: 1
       height: 0
       overflow-x: hidden

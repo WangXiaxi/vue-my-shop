@@ -2,8 +2,8 @@
   <div class="footer-nav">
     <ul>
       <router-link to="/site/home" tag="li" class="nav-1"><i class="nav-1"></i><span>首页</span></router-link>
-      <router-link to="/ucenter/uindex" tag="li" class="nav-2"><i class="nav-2"></i><span>派对</span></router-link>
-      <router-link to="/ucenter/1" tag="li" class="nav-cen">
+      <router-link to="/ucenter/1" tag="li" class="nav-2"><i class="nav-2"></i><span>派对</span></router-link>
+      <router-link to="/ucenter/2" tag="li" class="nav-cen">
         <div class="gardern-box">
           <div class="bg"></div>
           <div class="gar">
@@ -11,29 +11,28 @@
         </div>
         <span>扫一扫</span>
       </router-link>
-      <router-link to="/ucenter/2" tag="li" class="nav-3"><i class="nav-3"></i><span>红包</span></router-link>
-      <router-link to="/ucenter/3" tag="li" class="nav-4"><i class="nav-4"></i><span>我的</span></router-link>
+      <router-link to="/ucenter/3" tag="li" class="nav-3"><i class="nav-3"></i><span>红包</span></router-link>
+      <router-link to="/ucenter/uindex" tag="li" class="nav-4"><i class="nav-4"></i><span>我的</span></router-link>
     </ul>
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 export default {
 }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-   @import "~common/stylus/mixin"
+  @import "~common/stylus/mixin"
   .footer-nav
     height: 49px
     box-shadow: 0 0 2px rgba(0, 0, 0, .15)
     ul
       display: flex
-      
       li
         width: 19%
         text-align: center
-        padding: 6px 0
+        padding-top: 6px
         i
           display: block
           width: 100%
@@ -52,7 +51,7 @@ export default {
         span
           display: block
           margin-top: 6px
-          footer-size: 10px
+          font-size: 10px
           color: #666666
         &.router-link-active
           span
@@ -99,5 +98,6 @@ export default {
         span
           position: relative
           z-index: 2
-          padding-top: 22px
+          margin-top: 0
+          padding-top: 28px
 </style>
