@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import axios from 'axios'
+import axios from 'common/js/http'
 import 'common/js/reset' // rem
 import 'common/stylus/index.styl'
 import VueAwesomeSwiper from 'vue-awesome-swiper'

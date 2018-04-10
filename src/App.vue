@@ -28,7 +28,5 @@ export default {
       position: relative
       flex: 1
       height: 0
-      overflow-x: hidden
-      overflow-y: scroll
       -webkit-overflow-scrolling: touch
 </style>
