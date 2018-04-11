@@ -182,9 +182,6 @@
                 </div>
               </a>
             </swiper-slide>
-            <swiper-slide>
-              <!-- 占位专用 -->
-            </swiper-slide>
           </swiper>
         </div>
       </div>
@@ -231,6 +228,33 @@
                     无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
                   </div>
                   <div class="locat">
+                    浙江省杭州市萧山区义桥镇山后村东500米
+                  </div>
+                </div>
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a class="Nearby-item">
+                <img src="../../../../z_simulated_data/images/banner1.png">
+                <div class="info">
+                  <div class="tit">
+                    无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
+                  </div>
+                  <div class="locat">
+                    浙江省杭州市萧山区义桥镇山后村东500米
+                  </div>
+                </div>
+              </a>
+            </swiper-slide>
+            <swiper-slide>
+              <a class="Nearby-item">
+                <img src="../../../../z_simulated_data/images/banner1.png">
+                <div class="info">
+                  <div class="tit">
+                    无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
+                  </div>
+                  <div class="locat">
+                    浙江省杭州市萧山区义桥镇山后村东500米
                   </div>
                 </div>
               </a>
@@ -238,8 +262,20 @@
           </swiper>
         </div>
       </div>
+      <!-- 占位 -->
+      <div class="spliter"></div>
       <!-- 附近商家 -->
       <div class="nearseller-box">
+        <div class="pub-tit">
+          <h3><span class="tit">附近商家</span></h3>
+        </div>
+        <div class="nearseller">
+          <near-seller></near-seller>
+          <near-seller></near-seller>
+          <near-seller></near-seller>
+          <near-seller></near-seller>
+          <near-seller></near-seller>
+        </div>
       </div>
     </div>
   </div>
@@ -248,11 +284,15 @@
 <script type="text/ecmascript-6">
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import GoodsInfo from 'base/goods-info/goods-info'
+import NearSeller from 'base/near-seller/near-seller'
+import { getHome } from '@/api/api.js'
+
 export default {
   components: {
     swiper,
     swiperSlide,
-    GoodsInfo
+    GoodsInfo,
+    NearSeller
   },
   data () {
     return {
@@ -279,10 +319,16 @@ export default {
         freeMode: true
       },
       swiperOptionNearby: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true
       }
     }
   },
   created () {
+    getHome().then((res) => {
+      console.log(res)
+    })
   },
   mounted () {
   },
@@ -309,19 +355,7 @@ export default {
 <style scoped lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/mixin"
 .home
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  overflow: hidden
-  .scroll-box
-    position: absolute
-    top: 46px
-    left: 0
-    right: 0
-    bottom: 0
-    overflow-x: hidden
-    overflow-y: scroll
+  padding-bottom: 59px
   .spliter
     width: 100%
     height: 10px
@@ -494,7 +528,7 @@ export default {
       .swiper-slide
         width: 2.04rem
         &:last-child
-          width: 2px
+          margin-right: 12px
     .hot-item
       display: block
       width: 2.04rem
@@ -547,10 +581,15 @@ export default {
     position: relative
     .nearby-swiper
       padding-left: 12px
+      .swiper-slide
+        width: 4.62rem
+        &:last-child
+          margin-right: 12px
       .Nearby-item
         width: 4.62rem
         overflow: hidden
         display: block
+        padding-bottom: 14px
         img
           width: 4.62rem
           height: 3.58rem
@@ -558,12 +597,28 @@ export default {
       .info
         .tit
           overflow: hidden
-          font-size: 14px
+          font-size: 13px
           margin-top: 7px
-          margin-bottom: 13px
+          margin-bottom: 11px
           line-height: 15px
           color: RGB(102, 102, 102)
           no-wrap()
+        .locat
+          no-wrap()
+          padding-left: 16px
+          font-size: 12px
+          height: 14px
+          line-height: 14px
+          background: 0 10%/10px 12px no-repeat
+          bg-image("~common/image/local")
+  .nearseller-box
+    padding-top: 16px
+    position: relative
+    width: 100%
+    .nearseller
+      padding: 0 12px
+      .near-seller:last-child
+        border-bottom: none
   .more
     position: absolute
     right: 12px

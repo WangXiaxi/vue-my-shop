@@ -26,8 +26,15 @@ export default {
   @import "~common/stylus/mixin"
   .footer-nav
     height: 49px
-    box-shadow: 0 0 2px rgba(0, 0, 0, .15)
     ul
+      box-shadow: 0 0 2px rgba(0, 0, 0, .15)
+      position: fixed
+      bottom: 0
+      background: RGB(255, 255, 255)
+      z-index: 1000
+      height: 49px
+      width: 100%
+      max-width: 750px
       display: flex
       li
         width: 19%
@@ -40,6 +47,7 @@ export default {
           background-size: auto 22px
           background-repeat: no-repeat
           background-position: 50%
+          transition: all 0.3s
           &.nav-1
             bg-image("./images/nav1")
           &.nav-2
@@ -53,6 +61,7 @@ export default {
           margin-top: 6px
           font-size: 10px
           color: #666666
+          transition: all 0.3s
         &.router-link-active
           span
             color: #eb1212

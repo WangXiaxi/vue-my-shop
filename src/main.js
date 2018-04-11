@@ -3,12 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'common/js/http'
 import 'common/js/reset' // rem
 import 'common/stylus/index.styl'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 引入vuex
-// import store from './store'
+import store from './store/index'
 
 // import { Indicator, InfiniteScroll, Lazyload, MessageBox, Field } from 'mint-ui'
 import 'mint-ui/lib/style.css'
@@ -26,6 +25,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

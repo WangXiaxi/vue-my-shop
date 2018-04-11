@@ -4,6 +4,7 @@ import Home from 'site/home/home'
 import store from '../store/index'
 import Uindex from 'ucenter/uindex/uindex'
 import Login from 'login/login'
+import * as types from '../store/mutation-types'
 
 Vue.use(Router)
 
@@ -16,12 +17,18 @@ const router = new Router({
     { // 网站首页路由
       path: '/site/home',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {
+        keepAlive: true
+      }
     },
     { // 登录首页路由
       path: '/ucenter/uindex',
       name: 'Uindex',
-      component: Uindex
+      component: Uindex,
+      meta: {
+        requireAuth: true
+      }
     },
     { // 登录注册
       path: '/login',
@@ -32,12 +39,13 @@ const router = new Router({
 })
 
 // 页面刷新时，重新赋值token
-// if (window.localStorage.getItem('token')) {
-//   store.commit(types.LOGIN, window.localStorage.getItem('token'))
-// }
+if (window.sessionStorage.getItem('token')) {
+  store.commit(types.LOGIN, window.localStorage.getItem('token'))
+}
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(r => r.meta.requireAuth)) {
+    console.log(store.state.token)
     if (store.state.token) {
       next()
     } else {

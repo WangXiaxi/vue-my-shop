@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="uindex child-view">
     个人中心
   </div>
 </template>

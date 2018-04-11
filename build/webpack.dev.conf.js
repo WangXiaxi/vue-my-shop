@@ -12,9 +12,9 @@ const portfinder = require('portfinder')
 
 const express = require('express')
 const app = express()
-var appData = require('../z_simulated_data/data.json')
-var homeData = appData.homeData // 首页数据
-var apiRoutes = express.Router()
+const appData = require('../z_simulated_data/data.json')
+const homeData = appData.homeData // 首页数据
+const apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
 const HOST = process.env.HOST
@@ -56,6 +56,24 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           code: 1,
           msg: 'success',
           data: homeData
+        })
+      })
+      app.get('/api/login', (req, res) => {
+        let username = req.query.username
+        let password = req.query.password
+        console.log(username, password)
+        let code = 0
+        let msg = 'error'
+        let token = ''
+        if (username === 'wangxiaoxing' && password === '111111') {
+          code = 1
+          msg = 'success'
+          token = 'token-201804111300ceshi'
+        }
+        res.json({
+          code: code,
+          msg: msg,
+          token: token
         })
       })
     }

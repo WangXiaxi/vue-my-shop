@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <div class="router-box">
-      <router-view/>
-    </div>
+    <transition name="slide">
+      <router-view v-if="!$route.meta.keepAlive"></router-view>
+    </transition>
+    <transition name="slide">
+      <keep-alive>
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </keep-alive>
+    </transition>
     <footer-nav v-show="true"></footer-nav>
   </div>
 </template>
@@ -18,15 +23,13 @@ export default {
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+  .slide-enter-active,.slide-leave-active
+    transition: all 0.3s
+  .slide-enter,.slide-leave-to
+    opacity: 0
   #app
     width: 100%
     height: 100%
     position: relative
-    display: flex
-    flex-direction: column
-    .router-box
-      position: relative
-      flex: 1
-      height: 0
-      -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch
 </style>
