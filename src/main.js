@@ -9,11 +9,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 引入vuex
 import store from './store/index'
 
-// import { Indicator, InfiniteScroll, Lazyload, MessageBox, Field } from 'mint-ui'
+import { Lazyload } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
 // Vue.use(InfiniteScroll)
-// Vue.use(Lazyload)
+Vue.use(Lazyload)
 
 // 引入swiper
 require('swiper/dist/css/swiper.min.css')

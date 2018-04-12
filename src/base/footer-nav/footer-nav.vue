@@ -11,7 +11,7 @@
         </div>
         <span>扫一扫</span>
       </router-link>
-      <router-link to="/ucenter/3" tag="li" class="nav-3"><i class="nav-3"></i><span>红包</span></router-link>
+      <router-link to="/site/redPacket" tag="li" class="nav-3"><i class="nav-3"></i><span>红包</span></router-link>
       <router-link to="/ucenter/uindex" tag="li" class="nav-4"><i class="nav-4"></i><span>我的</span></router-link>
     </ul>
   </div>
@@ -31,7 +31,7 @@ export default {
       position: fixed
       bottom: 0
       background: RGB(255, 255, 255)
-      z-index: 1000
+      z-index: 10
       height: 49px
       width: 100%
       max-width: 750px

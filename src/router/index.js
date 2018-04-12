@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from 'site/home/home'
+import RedPacket from 'site/red-packet/red-packet'
 import store from '../store/index'
 import Uindex from 'ucenter/uindex/uindex'
 import Login from 'login/login'
@@ -18,6 +19,14 @@ const router = new Router({
       path: '/site/home',
       name: 'Home',
       component: Home,
+      meta: {
+        keepAlive: true
+      }
+    },
+    { // 网站首页路由
+      path: '/site/RedPacket',
+      name: 'RedPacket',
+      component: RedPacket,
       meta: {
         keepAlive: true
       }
@@ -40,12 +49,11 @@ const router = new Router({
 
 // 页面刷新时，重新赋值token
 if (window.sessionStorage.getItem('token')) {
-  store.commit(types.LOGIN, window.localStorage.getItem('token'))
+  store.commit(types.LOGIN, window.sessionStorage.getItem('token'))
 }
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(r => r.meta.requireAuth)) {
-    console.log(store.state.token)
     if (store.state.token) {
       next()
     } else {

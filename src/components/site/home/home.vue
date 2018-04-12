@@ -367,7 +367,7 @@ export default {
       position: relative
       width: 100%
       max-width: 750px
-      z-index: 100
+      z-index: 10
       background: RGB(235, 18, 18)
       height: 46px
       padding-top: 8px

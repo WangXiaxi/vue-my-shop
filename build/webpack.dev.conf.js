@@ -15,7 +15,7 @@ const app = express()
 const appData = require('../z_simulated_data/data.json')
 const homeData = appData.homeData // 首页数据
 const apiRoutes = express.Router()
-app.use('/api', apiRoutes)
+app.use('/', apiRoutes)
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -58,23 +58,36 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           data: homeData
         })
       })
-      app.get('/api/login', (req, res) => {
-        let username = req.query.username
-        let password = req.query.password
-        console.log(username, password)
-        let code = 0
-        let msg = 'error'
-        let token = ''
-        if (username === 'wangxiaoxing' && password === '111111') {
-          code = 1
-          msg = 'success'
-          token = 'token-201804111300ceshi'
-        }
-        res.json({
-          code: code,
-          msg: msg,
-          token: token
+      app.post('/api/login', (req, res) => {
+        var data = ''
+         
+        req.on('data', function(chunk) {
+          data += chunk
         })
+        req.on('end', function() {
+          let paramArr = data.split('&')
+          let resObj = {}
+          for(let i = 0; i < paramArr.length; i++){  
+            let str = paramArr[i].split('=')
+            resObj[str[0]] = str[1] 
+          } 
+          let username = resObj.username
+          let password = resObj.password
+          let code = 0
+          let msg = 'error'
+          let token = ''
+          if (username === 'wangxiaoxing' && password === '111111') {
+            code = 1
+            msg = 'success'
+            token = 'token-201804111300ceshi'
+          }
+          res.json({
+            code: code,
+            msg: msg,
+            token: token
+          })
+        })
+        
       })
     }
   },

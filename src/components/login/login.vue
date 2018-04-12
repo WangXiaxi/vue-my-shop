@@ -34,10 +34,8 @@ export default {
     formSubmit () {
       actLogin(this.username, this.password).then((res) => {
         if (res.code === ERR_OK) {
-          console.log(res)
           this.$store.commit(types.LOGIN, res.token)
           let redirect = decodeURIComponent(this.$route.query.redirect || '/')
-          console.log(redirect)
           this.$router.push({
             path: redirect
           })
