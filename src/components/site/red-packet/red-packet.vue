@@ -1,6 +1,6 @@
 <template>
   <div class="red-packet child-view">
-    <header-pub headerTitle="红包" bgRed=true>
+    <header-pub headerTitle="红包" :bgRed=true>
       <div class="explain">
         详细说明
       </div>

@@ -1,5 +1,5 @@
 import axios from 'common/js/http'
-import {URL} from './config'
+import { URL } from './config'
 import qs from 'qs'
 
 /** 首页数据 **/

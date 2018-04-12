@@ -9,10 +9,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 引入vuex
 import store from './store/index'
 
-import { Lazyload } from 'mint-ui'
+import { Lazyload, Indicator } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
 // Vue.use(InfiniteScroll)
+Vue.prototype.loading = Indicator
 Vue.use(Lazyload)
 
 // 引入swiper

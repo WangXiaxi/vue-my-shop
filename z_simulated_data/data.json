@@ -3,14 +3,39 @@
 		"banner": [
 			{
 				"id": 1,
-				"imgSrc": "../../../z_simulated_data/images/banner1.png",
-				"url": "/ucenter/uindex"
+				"imgSrc": "https://img1.360buyimg.com/da/jfs/t19150/246/1557213093/91897/d266517f/5acef9d3N5684d792.jpg",
+				"url": "/site/redPacket"
 			},
 			{
 				"id": 2,
-				"imgSrc": "../../../z_simulated_data/images/banner2.jpg",
-				"url": "/ucenter/uindex"
+				"imgSrc": "https://img1.360buyimg.com/da/s640x312_jfs/t18859/168/1538792251/197180/7597481d/5acdb65eN9cd16280.jpg",
+				"url": "/site/redPacket"
+			},
+			{
+				"id": 2,
+				"imgSrc": "https://m.360buyimg.com/mobilecms/s640x312_jfs/t18472/144/1530657442/194465/f212425a/5acf04afN5c07dce8.jpg",
+				"url": "/site/redPacket"
 			}
+		],
+		"news": [
+			{
+				"id": 1,
+				"title": "活动公告"
+			},
+			{
+				"id": 2,
+				"title": "于欢案背后团伙涉黑案开庭 于欢姑姑：望道歉赔偿"
+			},
+			{
+				"id": 3,
+				"title": "山西程三高调出狱案于13日二审宣判，一审判5年"
+			},
+			{
+				"id": 4,
+				"title": "黄炳誓被免去朝鲜国务委员会副委员长职务"
+			}
+		],
+		"hotGoods": [
 		]
 	}
 }

@@ -286,6 +286,7 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import GoodsInfo from 'base/goods-info/goods-info'
 import NearSeller from 'base/near-seller/near-seller'
 import { getHome } from '@/api/api.js'
+import { MP } from 'common/js/map.js'
 
 export default {
   components: {
@@ -326,13 +327,42 @@ export default {
     }
   },
   created () {
+    this.loading.open({
+      text: '数据加载...',
+      spinnerType: 'triple-bounce'
+    })
     getHome().then((res) => {
+      setTimeout(() => {
+        this.loading.close()
+      }, 1000)
       console.log(res)
     })
   },
   mounted () {
+    let _this = this
+    _this.$nextTick(() => {
+      MP().then(BMap => {
+        console.log(BMap)
+      })
+    })
   },
   methods: {
+  },
+  deactivated () {
+    if (this.$refs.bannerSwiper) {
+      this.$refs.bannerSwiper.swiper.stopAutoplay()
+    }
+    if (this.$refs.newsSwiper) {
+      this.$refs.newsSwiper.swiper.stopAutoplay()
+    }
+  },
+  activated () {
+    if (this.$refs.bannerSwiper) {
+      this.$refs.bannerSwiper.swiper.startAutoplay()
+    }
+    if (this.$refs.newsSwiper) {
+      this.$refs.newsSwiper.swiper.startAutoplay()
+    }
   }
 }
 </script>

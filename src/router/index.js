@@ -10,6 +10,7 @@ import * as types from '../store/mutation-types'
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
