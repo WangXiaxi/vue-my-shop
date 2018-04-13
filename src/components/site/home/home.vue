@@ -11,11 +11,9 @@
     </div>
     <div class="scroll-box">
       <!-- 轮播 -->
-      <div class="banner-box">
+      <div v-if="optionBanner.length>0" class="banner-box">
         <swiper :options="swiperOptionBanner" ref="bannerSwiper">
-          <swiper-slide><a><img class="swiper-img" src="../../../../z_simulated_data/images/banner1.png"></a></swiper-slide>
-          <swiper-slide><a><img class="swiper-img" src="../../../../z_simulated_data/images/banner1.png"></a></swiper-slide>
-          <swiper-slide><a><img class="swiper-img" src="../../../../z_simulated_data/images/banner1.png"></a></swiper-slide>
+          <swiper-slide v-for="(item, index) in optionBanner" :key="index"><router-link :to="item.url" tag="a"><img class="swiper-img" :src="item.imgSrc"></router-link></swiper-slide>
           <div class="home-swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
@@ -57,13 +55,12 @@
         </ul>
       </div>
       <!-- 新闻公告 -->
-      <div class="news-box">
+      <div v-if="optionNews.length>0" class="news-box">
         <div class="news">
           <i class="icon-img-news"></i>
           <div class="content">
              <swiper :options="swiperOptionNews" ref="newsSwiper">
-              <swiper-slide><a><i class="icon-news-tip"></i><span>最新公告</span></a></swiper-slide>
-              <swiper-slide><a><i class="icon-news-tip"></i><span>关于当天未拆红包处理方法公告</span></a></swiper-slide>
+              <swiper-slide v-for="(item, index) in optionNews" :key="index"><router-link :to="addUrl(['/newsDetail/',item.id])" tag="a"><i class="icon-news-tip"></i><span>{{item.title}}</span></router-link></swiper-slide>
             </swiper>
           </div>
           <i class="icon-img-more"></i>
@@ -121,7 +118,7 @@
       <!-- 占位 -->
       <div class="spliter"></div>
       <!-- 优品热卖 -->
-      <div class="hot-box">
+      <div v-if="hotGoods.length>0" class="hot-box">
         <div class="pub-tit">
           <h3><span class="tit">优品热卖</span><span>大集V商城</span></h3>
           <div class="hot-tips"></div>
@@ -132,53 +129,13 @@
         </div>
         <div class="hot-swiper">
           <swiper :options="swiperOptionHot" ref="hotSwiper">
-            <swiper-slide>
+            <swiper-slide v-for="(item, index) in hotGoods" :key="index">
               <a class="hot-item">
-                <img src="../../../../z_simulated_data/images/goods1.png">
+                <img :src="item.img">
                 <div class="info">
-                  <p class="tit">漳州诏安特产龙眼干龙眼干龙眼干</p>
-                  <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-                  <div class="sell-num">已售290</div>
-                </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="hot-item">
-                <img src="../../../../z_simulated_data/images/goods1.png">
-                <div class="info">
-                  <p class="tit">漳州诏安特产龙眼干龙眼干龙眼干</p>
-                  <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-                  <div class="sell-num">已售290</div>
-                </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="hot-item">
-                <img src="../../../../z_simulated_data/images/goods1.png">
-                <div class="info">
-                  <p class="tit">漳州诏安特产龙眼干龙眼干龙眼干</p>
-                  <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-                  <div class="sell-num">已售290</div>
-                </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="hot-item">
-                <img src="../../../../z_simulated_data/images/goods1.png">
-                <div class="info">
-                  <p class="tit">漳州诏安特产龙眼干龙眼干龙眼干</p>
-                  <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-                  <div class="sell-num">已售290</div>
-                </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="hot-item">
-                <img src="../../../../z_simulated_data/images/goods1.png">
-                <div class="info">
-                  <p class="tit">漳州诏安特产龙眼干龙眼干龙眼干</p>
-                  <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-                  <div class="sell-num">已售290</div>
+                  <p class="tit">{{item.name}}</p>
+                  <div class="price"><span class="tip">￥</span><span class="money">{{item.price}}</span></div>
+                  <div class="sell-num">已售{{item.sellerNum}}</div>
                 </div>
               </a>
             </swiper-slide>
@@ -193,14 +150,7 @@
           <h3><span class="tit">优品精选</span><span>大集V商城</span></h3>
         </div>
         <div class="goods-box">
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
-          <goods-info class="item"></goods-info>
+          <goods-info v-for="(item, index) in recommendGoods" :key="index" :goodInfo="item" class="item"></goods-info>
         </div>
         <div class="look-more">
           查看更多
@@ -209,7 +159,7 @@
       <!-- 占位 -->
       <div class="spliter"></div>
       <!-- 附近商圈 -->
-      <div class="nearby-box">
+      <div v-if="nearBusiness.length>0" class="nearby-box">
         <div class="pub-tit">
           <h3><span class="tit">附近商圈</span></h3>
           <div class="hot-tips"></div>
@@ -220,44 +170,18 @@
         </div>
         <div class="nearby-swiper">
           <swiper :options="swiperOptionNearby" ref="nearbySwiper">
-            <swiper-slide>
-              <a class="Nearby-item">
-                <img src="../../../../z_simulated_data/images/banner1.png">
+            <swiper-slide v-for="(item, index) in nearBusiness" :key="index">
+              <router-link :to="addUrl(['nearBusinessDetail',item.id])" tag="a" class="Nearby-item">
+                <img v-lazy="item.img">
                 <div class="info">
                   <div class="tit">
-                    无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
+                    {{item.name}}
                   </div>
                   <div class="locat">
-                    浙江省杭州市萧山区义桥镇山后村东500米
+                    {{item.address}}
                   </div>
                 </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="Nearby-item">
-                <img src="../../../../z_simulated_data/images/banner1.png">
-                <div class="info">
-                  <div class="tit">
-                    无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
-                  </div>
-                  <div class="locat">
-                    浙江省杭州市萧山区义桥镇山后村东500米
-                  </div>
-                </div>
-              </a>
-            </swiper-slide>
-            <swiper-slide>
-              <a class="Nearby-item">
-                <img src="../../../../z_simulated_data/images/banner1.png">
-                <div class="info">
-                  <div class="tit">
-                    无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）
-                  </div>
-                  <div class="locat">
-                    浙江省杭州市萧山区义桥镇山后村东500米
-                  </div>
-                </div>
-              </a>
+              </router-link>
             </swiper-slide>
           </swiper>
         </div>
@@ -265,16 +189,12 @@
       <!-- 占位 -->
       <div class="spliter"></div>
       <!-- 附近商家 -->
-      <div class="nearseller-box">
+      <div v-if="nearSeller.length>0" class="nearseller-box">
         <div class="pub-tit">
           <h3><span class="tit">附近商家</span></h3>
         </div>
         <div class="nearseller">
-          <near-seller></near-seller>
-          <near-seller></near-seller>
-          <near-seller></near-seller>
-          <near-seller></near-seller>
-          <near-seller></near-seller>
+          <near-seller v-for="(item, index) in nearSeller" :key="index" :sellerInfo="item"></near-seller>
         </div>
       </div>
     </div>
@@ -285,8 +205,10 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import GoodsInfo from 'base/goods-info/goods-info'
 import NearSeller from 'base/near-seller/near-seller'
-import { getHome } from '@/api/api.js'
+import { getHome, getHomeNearBy } from '@/api/api.js'
 import { MP } from 'common/js/map.js'
+import * as types from '../../../store/mutation-types'
+import { ERR_OK } from '@/api/config.js'
 
 export default {
   components: {
@@ -323,8 +245,16 @@ export default {
         slidesPerView: 'auto',
         spaceBetween: 20,
         freeMode: true
-      }
+      },
+      optionBanner: {},
+      optionNews: {},
+      hotGoods: {},
+      recommendGoods: {},
+      nearBusiness: {},
+      nearSeller: {}
     }
+  },
+  cumputed: {
   },
   created () {
     this.loading.open({
@@ -332,21 +262,58 @@ export default {
       spinnerType: 'triple-bounce'
     })
     getHome().then((res) => {
-      setTimeout(() => {
-        this.loading.close()
-      }, 1000)
+      if (res.code === ERR_OK) {
+        this.optionBanner = res.data.banner
+        this.optionNews = res.data.news
+        this.hotGoods = res.data.hotGoods
+        this.recommendGoods = res.data.recommendGoods
+      }
       console.log(res)
     })
   },
   mounted () {
-    let _this = this
-    _this.$nextTick(() => {
-      MP().then(BMap => {
-        console.log(BMap)
-      })
+    this.$nextTick(() => {
+      this.getCurLocat()
     })
   },
   methods: {
+    addUrl (arr) {
+      return arr.toString().replace(/,/g, '')
+    },
+    getCurLocat () { // 获取当前地址获取附近商家、商圈
+      let _this = this
+      MP().then(BMap => { // 地图完成
+        let geolocation = new BMap.Geolocation()
+        let latitude = null
+        let longitude = null
+        geolocation.getCurrentPosition((r) => {
+          /* eslint-disable */
+          if(geolocation.getStatus() === BMAP_STATUS_SUCCESS) {
+          /* eslint-disable */
+            // 请求数据
+            latitude = r.latitude,
+            longitude = r.longitude
+            // 储存当前地址
+            let curAdress = {
+              adress: r.address,
+              point: r.point
+            }
+            _this.$store.commit(types.SAVECURADDRESS, curAdress)
+          } 
+          getHomeNearBy(latitude, longitude).then((res) => {
+            _this.nearBusiness = res.data.nearBusiness
+            _this.nearSeller = res.data.nearSeller
+            _this.loading.close()
+          })
+        }, (e) => {
+          getHomeNearBy(latitude, longitude).then((res) => {
+            _this.nearBusiness = res.data.nearBusiness
+            _this.nearSeller = res.data.nearSeller
+            _this.loading.close()
+          })
+        })
+      })
+    }
   },
   deactivated () {
     if (this.$refs.bannerSwiper) {
@@ -432,6 +399,7 @@ export default {
     width: 100%
     .swiper-img
       width: 100%
+      height: 3.66rem
   .nav-box
     background: RGB(255, 255, 255)
     ul.nav

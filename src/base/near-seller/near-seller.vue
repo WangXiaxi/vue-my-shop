@@ -1,19 +1,19 @@
 <template>
   <div class="near-seller">
     <div class="img-box">
-      <img src="https://www.ehanone.com/pic/thumb/img/upload@_@2018@_@02@_@26@_@20180226084350408.jpg">
+      <img v-lazy="sellerInfo.img">
     </div>
     <div class="info-box">
-      <h3>e兑商城自营店e兑商城自营店e兑商城自营店</h3>
-      <div class="distance">388m</div>
+      <h3>{{sellerInfo.name}}</h3>
+      <!-- <div class="distance">388m</div> -->
       <div class="eval">
         <div class="star-content">
-          <star :score="4.7"></star>
+          <star :score="sellerInfo.score"></star>
         </div>
-        <span class="score">4.7</span>
-        <span class="eval-num">23评价</span>
+        <span class="score">{{sellerInfo.score}}</span>
+        <span class="eval-num">{{sellerInfo.eval}}评价</span>
       </div>
-      <div class="locat">浙江省杭州市萧山区东方文化园</div>
+      <div class="locat">{{sellerInfo.address}}</div>
     </div>
   </div>
 </template>
@@ -21,6 +21,12 @@
 <script type="text/ecmascript-6">
 import star from 'base/star/star'
 export default {
+  props: {
+    sellerInfo: {
+      type: Object,
+      dafault: {}
+    }
+  },
   components: {
     star
   }

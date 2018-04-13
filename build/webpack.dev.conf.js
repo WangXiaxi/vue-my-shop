@@ -14,6 +14,7 @@ const express = require('express')
 const app = express()
 const appData = require('../z_simulated_data/data.json')
 const homeData = appData.homeData // 首页数据
+const homeNeardy = appData.homeNeardy // 首页数据
 const apiRoutes = express.Router()
 app.use('/', apiRoutes)
 
@@ -87,7 +88,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             token: token
           })
         })
-        
+      })
+      app.get('/api/getHomeNearBy', (req, res) => {
+        res.json({
+          code: 1,
+          msg: 'success',
+          data: homeNeardy
+        })
       })
     }
   },

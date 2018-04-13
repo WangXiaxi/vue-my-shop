@@ -9,6 +9,19 @@ export function getHome () {
     return Promise.resolve(res.data)
   })
 }
+/** 首页附近商家数据 **/
+export function getHomeNearBy (latitude, longitude) {
+  const url = URL + '/api/getHomeNearBy'
+  const data = {
+    latitude: latitude,
+    longitude: longitude
+  }
+  return axios.get(url, {
+    params: data
+  }).then((res) => {
+    return Promise.resolve(res.data)
+  })
+}
 
 /** 账号密码登录 **/
 export const actLogin = (username, password) => {

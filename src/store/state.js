@@ -1,6 +1,7 @@
 const state = {
   user: {},
-  token: null
+  token: null,
+  curAddress: {}
 }
 
 export default state

@@ -8,6 +8,9 @@ const mutations = {
   [types.LOGOUT]: (state) => {
     localStorage.removeItem('token')
     state.token = null
+  },
+  [types.SAVECURADDRESS]: (state, data) => {
+    state.curAddress = JSON.parse(JSON.stringify(data))
   }
 }
 

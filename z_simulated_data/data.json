@@ -35,7 +35,240 @@
 				"title": "黄炳誓被免去朝鲜国务委员会副委员长职务"
 			}
 		],
+		"consume": {
+			"yesterdayMoney": 368595.00,
+			"allMoney": 2130000.00,
+			"toDayMoney": 20000.00,
+			"allPartake": 23322.00,
+			"toPartake": 1500.00
+		},
 		"hotGoods": [
+			{
+				"id": 1,
+				"name": "【男女款 两双立减20】梵班 飞织气垫 2018春夏新款 潮流时尚运动鞋 户外跑步鞋 黑橘红男女款 41运动码",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com/mobilecms/s156x156_jfs/t17542/58/1289129853/429306/24910a2e/5ac1ef66N2f08b4d3.jpg"
+			},
+			{
+				"id": 2,
+				"name": "月月舒（yueyueshu） 卫生巾 瞬吸棉柔 日夜组合10包86片装 夜用加长轻薄透气 组合",
+				"price": "29.9",
+				"oldPrice": "89.8",
+				"sellerNum": "2",
+				"img": "https://m.360buyimg.com/mobilecms/s220x220_jfs/t19417/330/892934824/442264/bc09beb5/5ab0d40dN35e633de.jpg"
+			},
+			{
+				"id": 3,
+				"name": "戴尔DELL成就15.6英寸商务办公轻薄便携笔记本电脑(i5-7200U 8G 256GSSD FHD 指纹识别 Win10)银",
+				"price": "4999",
+				"oldPrice": "4999",
+				"sellerNum": "3",
+				"img": "https://m.360buyimg.com/n1/s142x142_jfs/t9943/215/2563177090/213628/66bc1333/59f98e92N14a8d11a.jpg!q70.jpg.dpg"
+			},
+			{
+				"id": 4,
+				"name": "芳帛 T恤女长袖2018春装V领条纹韩版修身t恤时尚女装打底衫上衣 白宽条纹 M",
+				"price": "89",
+				"oldPrice": "319",
+				"sellerNum": "230",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t15901/287/2255003186/500002/91d00a62/5a9f70fdNbb73e4cc.jpg"
+			},
+			{
+				"id": 5,
+				"name": "团子抱枕可爱表情抱枕毛绒玩具大号玩偶小抱枕睡觉公仔布偶生日礼物女孩 喜欢你 40cm",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t12385/350/2067831976/105062/57819f54/5a6491deN5d855655.jpg"
+			},
+			{
+				"id": 6,
+				"name": "图拉斯 苹果X钢化膜iPhoneX全屏全覆盖6D抗蓝光防爆玻璃手机10贴膜前后背膜 【黑色】高清款★真6D全屏隐形膜",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t14266/106/2593223727/439988/bcd22b7d/5aa9efc0N64a54254.jpg"
+			},
+			{
+				"id": 7,
+				"name": "承莎T恤女2018春夏装新款短袖时尚韩版宽松休闲卫衣两件套运动服女 CS8897 白色 L",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t19579/106/867457274/213597/cc17d9b4/5aae1accN85a709d2.jpg"
+			},
+			{
+				"id": 1,
+				"name": "百宣娇t恤女短袖2018夏季新款韩版修身百搭韩范打底衫休闲女士上衣潮 绿色 L（建议95-105斤穿）",
+				"price": "58",
+				"oldPrice": "329",
+				"sellerNum": "213",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t17485/139/154267495/72910/3e0f8356/5a601465Ndcc8aae3.jpg"
+			}
+		],
+		"recommendGoods": [
+			{
+				"id": 1,
+				"name": "【男女款 两双立减20】梵班 飞织气垫 2018春夏新款 潮流时尚运动鞋 户外跑步鞋 黑橘红男女款 41运动码",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com/mobilecms/s156x156_jfs/t17542/58/1289129853/429306/24910a2e/5ac1ef66N2f08b4d3.jpg"
+			},
+			{
+				"id": 2,
+				"name": "月月舒（yueyueshu） 卫生巾 瞬吸棉柔 日夜组合10包86片装 夜用加长轻薄透气 组合",
+				"price": "29.9",
+				"oldPrice": "89.8",
+				"sellerNum": "2",
+				"img": "https://m.360buyimg.com/mobilecms/s220x220_jfs/t19417/330/892934824/442264/bc09beb5/5ab0d40dN35e633de.jpg"
+			},
+			{
+				"id": 3,
+				"name": "戴尔DELL成就15.6英寸商务办公轻薄便携笔记本电脑(i5-7200U 8G 256GSSD FHD 指纹识别 Win10)银",
+				"price": "4999",
+				"oldPrice": "4999",
+				"sellerNum": "3",
+				"img": "https://m.360buyimg.com/n1/s142x142_jfs/t9943/215/2563177090/213628/66bc1333/59f98e92N14a8d11a.jpg!q70.jpg.dpg"
+			},
+			{
+				"id": 4,
+				"name": "芳帛 T恤女长袖2018春装V领条纹韩版修身t恤时尚女装打底衫上衣 白宽条纹 M",
+				"price": "89",
+				"oldPrice": "319",
+				"sellerNum": "230",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t15901/287/2255003186/500002/91d00a62/5a9f70fdNbb73e4cc.jpg"
+			},
+			{
+				"id": 5,
+				"name": "团子抱枕可爱表情抱枕毛绒玩具大号玩偶小抱枕睡觉公仔布偶生日礼物女孩 喜欢你 40cm",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t12385/350/2067831976/105062/57819f54/5a6491deN5d855655.jpg"
+			},
+			{
+				"id": 6,
+				"name": "图拉斯 苹果X钢化膜iPhoneX全屏全覆盖6D抗蓝光防爆玻璃手机10贴膜前后背膜 【黑色】高清款★真6D全屏隐形膜",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t14266/106/2593223727/439988/bcd22b7d/5aa9efc0N64a54254.jpg"
+			},
+			{
+				"id": 7,
+				"name": "承莎T恤女2018春夏装新款短袖时尚韩版宽松休闲卫衣两件套运动服女 CS8897 白色 L",
+				"price": "99",
+				"oldPrice": "319",
+				"sellerNum": "23",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t19579/106/867457274/213597/cc17d9b4/5aae1accN85a709d2.jpg"
+			},
+			{
+				"id": 1,
+				"name": "百宣娇t恤女短袖2018夏季新款韩版修身百搭韩范打底衫休闲女士上衣潮 绿色 L（建议95-105斤穿）",
+				"price": "58",
+				"oldPrice": "329",
+				"sellerNum": "213",
+				"img": "https://m.360buyimg.com//mobilecms/s410x410_jfs/t17485/139/154267495/72910/3e0f8356/5a601465Ndcc8aae3.jpg"
+			}
+		]
+	},
+	"homeNeardy": {
+		"nearBusiness": [
+			{
+				"id": 1,
+				"img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523610106526&di=bf29ae59f5a6b36f4ea126a9793c478c&imgtype=0&src=http%3A%2F%2Fimgs.soufun.com%2Fnews%2F2015_10%2F24%2Fnews%2F1445620638129_000.jpg",
+				"name": "杭州市余杭区临平九曲营步行街商圈",
+				"address": "杭州市余杭区临平九曲营路步行街",
+				"lat": 30.424389,
+				"long": 120.301922
+			},
+			{
+				"id": 2,
+				"img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523610106526&di=f535b8e4a762ae10ccc386169af4a14e&imgtype=0&src=http%3A%2F%2Fimg8.zol.com.cn%2Fbbs%2Fupload%2F21076%2F21075656.jpg",
+				"name": "杭州市江干区钱江万象城商圈",
+				"address": "杭州市江干区钱江新城富春路701号",
+				"lat": 30.251736,
+				"long": 120.21557
+			},
+			{
+				"id": 3,
+				"img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523610106526&di=8c49cf0208586d673c6b591c4bae8568&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D2dcac719b212c8fca0fefe8d957bf729%2F0e2442a7d933c8958e022d42da1373f08202008e.jpg",
+				"name": "杭州市临安市万华广场商圈",
+				"address": "杭州市临安市钱王街855号",
+				"lat": 30.222264,
+				"long": 119.705866
+			},
+			{
+				"id": 4,
+				"img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523610106524&di=8788d4e6fe9da9c06cab1d0d9c6e8dc0&imgtype=0&src=http%3A%2F%2Fimgs.soufun.com%2Fnews%2F2015_09%2F17%2Fnews%2F1442446723817_000.jpg",
+				"name": "揭阳市榕江大酒店商圈",
+				"address": "广东省揭阳市榕城区临江北路41号",
+				"lat": 23.550863,
+				"long": 116.369468
+			},
+			{
+				"id": 5,
+				"img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523611769173&di=3e941b229083b53bb75dd11d4afb70d9&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1668366365%2C2869122508%26fm%3D214%26gp%3D0.jpg",
+				"name": "上海市嘉定区罗宾森广场商圈",
+				"address": "上海市嘉定区城中路138号",
+				"lat": 31.384238,
+				"long": 121.245105
+			}
+		],
+		"nearSeller": [
+			{
+				"id": 1,
+				"img": "https://p0.meituan.net/mogu/be4fc25dc84eabd00aef5eb4471b9d2b46507.jpg",
+				"name": "土乡源饭店",
+				"address": "东方文化园步行街6幢对面",
+				"score": 3.7,
+				"eval": 32,
+				"lat": 36.6632782675264,
+				"long": 117.026557617188
+			},
+			{
+				"id": 2,
+				"img": "https://p0.meituan.net/merchantpic/a47767ff54e28050d019327dbf8307d329934.jpg",
+				"name": "广州鹏爵贸易有限公司",
+				"address": "龙洞米机里2号五楼03",
+				"score": 4.7,
+				"eval": 33,
+				"lat": 23.1406646219802,
+				"long": 113.335355668656
+			},
+			{
+				"id": 3,
+				"img": "https://p0.meituan.net/deal/3b3769a448a207ca54f9f4b885437cab120189.jpg",
+				"name": "青县晶浩针织器材商行",
+				"address": "104国道车站路口南东侧",
+				"score": 2.7,
+				"eval": 132,
+				"lat": 30.424389,
+				"long": 120.301922
+			},
+			{
+				"id": 4,
+				"img": "https://p0.meituan.net/deal/affb86e4a75a90e9fc64181254e5ea42124476.jpg",
+				"name": "福运餐饮店",
+				"address": "侯马经济开发区秦村步行街西排9号",
+				"score": 2.2,
+				"eval": 332,
+				"lat": 35.620948,
+				"long": 111.38282
+			},
+			{
+				"id": 5,
+				"img": "https://p1.meituan.net/shopmainpic/2f3f9a38cdc3d34b0fe11b8152f7db2569188.jpg",
+				"name": "雅核康养生店",
+				"address": "中山路61号6食衣号街区2楼51",
+				"score": 1.7,
+				"eval": 3,
+				"lat": 39.125648,
+				"long": 117.254425
+			}
 		]
 	}
 }

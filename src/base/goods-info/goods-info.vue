@@ -1,18 +1,24 @@
 <template>
   <div class="goods-info">
     <div class="img-box">
-      <img src="../../../z_simulated_data/images/banner1.png">
+      <img v-lazy="goodInfo.img">
     </div>
     <div class="info">
-      <p class="tit">无限极 商务旅游推荐 植雅随行装旅行（5件套）植雅随行装旅行（5件套）植雅随行装旅行（5件套）</p>
-      <div class="price"><span class="tip">￥</span><span class="money">98.0</span></div>
-      <div class="sell-num">已售290</div>
+      <p class="tit">{{goodInfo.name}}</p>
+      <div class="price"><span class="tip">￥</span><span class="money">{{goodInfo.price}}</span></div>
+      <div class="sell-num">已售{{goodInfo.sellerNum}}</div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 export default {
+  props: {
+    goodInfo: {
+      type: Object,
+      dafault: {}
+    }
+  }
 }
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
