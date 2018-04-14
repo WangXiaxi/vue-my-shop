@@ -34,7 +34,7 @@ export default {
 <style scoped lang="stylus" rel="stylesheet/stylus">
 @import "~common/stylus/mixin"
 .header-box
-  height: 46px
+  height: 42px
   background: RGB(255, 255, 255)
   position: fixed
   top: 0
@@ -46,11 +46,11 @@ export default {
   .tit
     text-align: center
     width: 100%
-    line-height: 46px
+    line-height: 42px
     font-size: 18px
   .go-back
     font-size: 14px
-    line-height: 46px
+    line-height: 42px
     position: absolute
     left: 12px
     top: 0
@@ -62,14 +62,14 @@ export default {
     position: absolute
     right: 12px
     top: 0
-    height: 46px
+    height: 42px
 .red-header
   background: RGB(235, 18, 18)
   .tit
     color: RGB(255, 255, 255)
   .go-back
     color: RGB(255, 255, 255)
-    bg-image("~common/image/go-back-red")
+    bg-image("~common/image/go-back")
   &:after
     content: none
 </style>

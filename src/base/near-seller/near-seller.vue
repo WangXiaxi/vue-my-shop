@@ -5,7 +5,7 @@
     </div>
     <div class="info-box">
       <h3>{{sellerInfo.name}}</h3>
-      <!-- <div class="distance">388m</div> -->
+      <div class="distance">{{getGCD}}</div>
       <div class="eval">
         <div class="star-content">
           <star :score="sellerInfo.score"></star>
@@ -20,6 +20,9 @@
 
 <script type="text/ecmascript-6">
 import star from 'base/star/star'
+import { getGreatCircleDistance } from 'common/js/map'
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     sellerInfo: {
@@ -27,8 +30,19 @@ export default {
       dafault: {}
     }
   },
+  computed: {
+    getGCD () {
+      let distance = getGreatCircleDistance(this.curAddress.point.lat, this.curAddress.point.lng, this.sellerInfo.lat, this.sellerInfo.long)
+      return distance > 1000 ? '>1km' : `${Math.ceil(distance)}m`
+    },
+    ...mapGetters([
+      'curAddress'
+    ])
+  },
   components: {
     star
+  },
+  created () {
   }
 }
 </script>

@@ -192,6 +192,10 @@
       <div v-if="nearSeller.length>0" class="nearseller-box">
         <div class="pub-tit">
           <h3><span class="tit">附近商家</span></h3>
+          <div class="more">
+            <span>更多</span>
+            <i></i>
+          </div>
         </div>
         <div class="nearseller">
           <near-seller v-for="(item, index) in nearSeller" :key="index" :sellerInfo="item"></near-seller>
