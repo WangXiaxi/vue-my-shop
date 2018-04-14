@@ -206,7 +206,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import GoodsInfo from 'base/goods-info/goods-info'
 import NearSeller from 'base/near-seller/near-seller'
 import { getHome, getHomeNearBy } from '@/api/api.js'
@@ -216,8 +215,6 @@ import { ERR_OK } from '@/api/config.js'
 
 export default {
   components: {
-    swiper,
-    swiperSlide,
     GoodsInfo,
     NearSeller
   },
